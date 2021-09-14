@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ru_category_array">
+        <item>Напитки для вечеринки</item>
+        <item>Шоты</item>
+        <item>Коктейль</item>
+        <item>Мягкие напитки</item>
+        <item>Обычный напиток</item>
+        <item>Пиво</item>
+        <item>Домашний ликер</item>
+        <item>Молочный коктейль</item>
+        <item>Какао</item>
+        <item>Кофе чай</item>
+        <item>Разное</item>
+    </string-array>
+    <string-array name="ru_alcoholic_array">
+        <item>Безалкогольный</item>
+        <item>Алкогольный</item>
+    </string-array>
+    <string-array name="ru_menu_filter_category">
+        <item>Все напитки</item>
+        <item>Напитки для вечеринки</item>
+        <item>Шоты</item>
+        <item>Коктейль</item>
+        <item>Мягкие напитки</item>
+        <item>Обычный напиток</item>
+        <item>Пиво</item>
+        <item>Домашний ликер</item>
+        <item>Молочный коктейль</item>
+        <item>Какао</item>
+        <item>Кофе чай</item>
+        <item>Разное</item>
+    </string-array>
+    
+</resources>

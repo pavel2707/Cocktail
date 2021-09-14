@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UI.AddFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <EditText
+        android:id="@+id/strDrinkNameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_drink_text"
+
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addStrDrinkThumb"
+        app:layout_constraintTop_toTopOf="@id/addStrDrinkThumb"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/addStrDrinkThumb"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_add_foto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:id="@+id/strCategoryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category_text"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintTop_toBottomOf="@id/strDrinkNameET"/>
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/strCategoryTV"
+        app:layout_constraintBottom_toBottomOf="@id/strCategoryTV"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb"
+        />
+    <TextView
+        android:id="@+id/strAlcoholicTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category_alcohol"
+        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintTop_toBottomOf="@id/strCategoryTV"/>
+    <Spinner
+        android:id="@+id/spinnerAlcoholic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/strAlcoholicTV"
+        app:layout_constraintBottom_toBottomOf="@id/strAlcoholicTV"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb"
+       />
+
+    <EditText
+        android:id="@+id/strInstructionsET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/instruction_text"
+        android:paddingStart="5dp"
+        android:background="@drawable/custom_border"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintTop_toBottomOf="@id/strAlcoholicTV"
+        tools:ignore="RtlSymmetry" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ingredient_measure_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_border"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/strInstructionsET"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb">
+
+        <EditText style="@style/editTextIngredientMeasure"
+            android:id="@+id/add_ingredient1_editT"
+            android:hint="@string/ingredient1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText style="@style/editTextIngredientMeasure"
+            android:id="@+id/add_measure1_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient1_editT"
+            />
+        <Button
+            android:id="@+id/btn_add_ingredients1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ingredients_text"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure1_editT" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ingredient_measure_layout2"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_border"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_measure_layout"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb">
+
+        <EditText style="@style/editTextIngredientMeasure"
+            android:id="@+id/add_ingredient2_editT"
+            android:hint="@string/ingredient2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText style="@style/editTextIngredientMeasure"
+            android:id="@+id/add_measure2_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient2_editT" />
+        <Button
+            android:id="@+id/btn_add_ingredients2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ingredients_text"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure2_editT" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ingredient_measure_layout3"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_border"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_measure_layout2"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb">
+
+        <EditText style="@style/editTextIngredientMeasure"
+            android:id="@+id/add_ingredient3_editT"
+            android:hint="@string/ingredient3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText style="@style/editTextIngredientMeasure"
+            android:id="@+id/add_measure3_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient3_editT" />
+        <Button
+            android:id="@+id/btn_add_ingredients3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ingredients_text"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure3_editT" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ingredient_measure_layoutAll"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_border"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/ingredient_measure_layout3"
+        app:layout_constraintStart_toStartOf="@id/strDrinkNameET"
+        app:layout_constraintEnd_toEndOf="@id/addStrDrinkThumb">
+
+        <!--  start block 4-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient4_editT"
+            android:hint="@string/ingredient4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure4_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure4_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient4_editT"
+            />
+        <!--  end block 4-->
+        <!--  start block 5-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient5_editT"
+            android:hint="@string/ingredient5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient4_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure5_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure5_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure4_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient5_editT"
+            />
+        <!--  end block 5-->
+        <!--  start block 6-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient6_editT"
+            android:hint="@string/ingredient6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient5_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure6_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure6_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure5_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient6_editT"
+            />
+        <!--  end block 6-->
+        <!--  start block 7-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient7_editT"
+            android:hint="@string/ingredient7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient6_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure7_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure7_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure6_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient7_editT"
+            />
+        <!--  end block 7-->
+        <!--  start block 8-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient8_editT"
+            android:hint="@string/ingredient8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient7_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure8_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure8_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure7_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient8_editT"
+            />
+        <!--  end block 8-->
+        <!--  start block 9-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient9_editT"
+            android:hint="@string/ingredient9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient8_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure9_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure9_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure8_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient9_editT"
+            />
+        <!--  end block 9-->
+        <!--  start block 10-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient10_editT"
+            android:hint="@string/ingredient10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient9_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure10_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure10_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure9_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient10_editT"
+            />
+        <!--  end block 10-->
+        <!--  start block 11-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient11_editT"
+            android:hint="@string/ingredient11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient10_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure11_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure11_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure10_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient11_editT"
+            />
+        <!--  end block 11-->
+        <!--  start block 12-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient12_editT"
+            android:hint="@string/ingredient12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient11_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure12_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure12_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure11_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient12_editT"
+            />
+        <!--  end block 12-->
+        <!--  start block 13-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient13_editT"
+            android:hint="@string/ingredient13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient12_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure13_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure13_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure12_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient13_editT"
+            />
+        <!--  end block 13-->
+        <!--  start block 14-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient14_editT"
+            android:hint="@string/ingredient14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient13_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure14_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure14_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure13_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient14_editT"
+            />
+        <!--  end block 14-->
+        <!--  start block 15-->
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_ingredient15_editT"
+            android:hint="@string/ingredient15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_ingredient14_editT"
+            app:layout_constraintEnd_toStartOf="@+id/add_measure15_editT"/>
+        <EditText style="@style/editTextIngredientMeasureAll"
+            android:id="@+id/add_measure15_editT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_measure14_editT"
+            app:layout_constraintStart_toEndOf="@id/add_ingredient15_editT"
+            />
+        <!--  end block 15-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

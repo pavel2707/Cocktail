@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UI.ReviewFragment">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+<ScrollView
+    android:id="@+id/revLayout"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/detailsImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailsNameTV"
+            android:layout_marginTop="2dp"
+             />
+
+        <TextView
+            android:id="@+id/detailsNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/block_image_like"
+            />
+        <LinearLayout
+            android:id="@+id/block_image_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_favorite_false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_favorite"
+                android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/img_favorite_true"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_favorite_select"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsImageView">
+
+
+            <TextView
+                android:id="@+id/detailsCategoryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="detailsCategoryTV"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+            <TextView
+                android:id="@+id/detailsAlcoholicTV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="detailsAlcoholicTV"
+                android:textSize="17sp"
+                android:gravity="end"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout1">
+
+            <TextView
+                android:id="@+id/detailsInstrTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text=""
+                android:textSize="17sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients1TV"
+                    android:text=""
+                     />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure1TV"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients2TV"
+                    android:text="" />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure2TV"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients3TV"
+                    android:text="" />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure3TV"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients4TV"
+                    android:text="" />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure4TV"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients5TV"
+                    android:text="" />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure5TV"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout7">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients6TV"
+                    android:text="" />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure6TV"
+                    android:text="" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients7TV"
+                    android:text="" />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure7TV"
+                    android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients8TV"
+                    android:text="ingredient8"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure8TV"
+                    android:text="measure8"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients9TV"
+                    android:text="ingredient9"
+                     />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure9TV"
+                    android:text="measure9"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout11">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients10TV"
+                    android:text="ingredient10"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure10TV"
+                    android:text="measure10"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout12">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients11TV"
+                    android:text="ingredient11"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure11TV"
+                    android:text="measure11"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout13">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients12TV"
+                    android:text="ingredient12"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure12TV"
+                    android:text="measure12"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout14">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients13TV"
+                    android:text="ingredient13"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure13TV"
+                    android:text="measure13"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients14TV"
+                    android:text="ingredient14"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure14TV"
+                    android:text="measure14"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayout17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/linLayout1"
+            app:layout_constraintTop_toBottomOf="@id/linLayout16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView style="@style/textViewIngredient"
+                    android:id="@+id/detailsIngredients15TV"
+                    android:text="ingredient15"
+                    />
+                <TextView style="@style/textViewMeasure"
+                    android:id="@+id/detailsMeasure15TV"
+                    android:text="measure15"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

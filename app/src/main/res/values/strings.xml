@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Cocktail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="main_text_fragment">Коктейли</string>
+    <string name="favorites_text_fragment">Избранные коктейли</string>
+    <string name="alc_text_fragment">Алкогольные</string>
+    <string name="not_alc_text_fragment">Безалкогольные</string>
+    <string name="cocktail">Коктейль</string>
+    <string name="random_text">Случайный</string>
+    <string name="add_fav_text">Добавить в избранное</string>
+    <string name="del_fav_text">Удалить из избранного</string>
+    <string name="clear_fav_text">Удалить все</string>
+    <string name="delete_text">Удалить коктейль</string>
+
+    <string name="delete_question">Вы действительно хотите удалить?</string>
+    <string name="delete_question_all">Вы действительно хотите всё удалить?</string>
+    <string name="delete_yes">Да</string>
+    <string name="delete_no">Нет</string>
+
+    <string name="new_cocktail_text">Новый коктейль</string>
+    <string name="add_ingredients_text">Добавить ингредиенты</string>
+    <string name="ingredient1">Ингредиент 1</string>
+    <string name="ingredient2">Ингредиент 2</string>
+    <string name="ingredient3">Ингредиент 3</string>
+    <string name="ingredient4">Ингредиент 4</string>
+    <string name="ingredient5">Ингредиент 5</string>
+    <string name="ingredient6">Ингредиент 6</string>
+    <string name="ingredient7">Ингредиент 7</string>
+    <string name="ingredient8">Ингредиент 8</string>
+    <string name="ingredient9">Ингредиент 9</string>
+    <string name="ingredient10">Ингредиент 10</string>
+    <string name="ingredient11">Ингредиент 11</string>
+    <string name="ingredient12">Ингредиент 12</string>
+    <string name="ingredient13">Ингредиент 13</string>
+    <string name="ingredient14">Ингредиент 14</string>
+    <string name="ingredient15">Ингредиент 15</string>
+    <string name="measure">Количество</string>
+    <string name="category_alcohol">Алкогольный:</string>
+    <string name="name_drink_text">Название</string>
+    <string name="category_text">Категория:</string>
+    <string name="instruction_text">Инструкция..</string>
+
+    <string name="edit_text_fragment">Редактирование</string>
+    <string name="edit_text_drink">Редактировать коктейль</string>
+    <string name="search_by_ingredient">Название ингредиента..</string>
+    <string name="find_text">Найти</string>
+    <string name="text_name_app">Cocktail</string>
+
+
+</resources>
